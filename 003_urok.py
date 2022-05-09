@@ -4,11 +4,11 @@ if len(user_id) !=11:
         print('Code is too long')
     else:
         print('Code is too short')
-else:
-    if user_id.isdigit():
+elif user_id.isdigit():
         print(f'Your ID is {user_id}')
-    else:
+else:
         print('You have to use numbers only')
+
 # user_input = input('Please input:')
 # if user_input == '1':
 #     print('1')
