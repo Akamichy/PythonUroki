@@ -13,10 +13,9 @@ print(example_string3.strip("*"))
 
 # Write a code to return "Hello my name is Jack"
 example_string4 = "hello my name is jack"
-part1 = "hello"
-part2 = "my name is"
-part3 = "jack"
-print((part1.capitalize()) + " " + part2 + " " + (part3.capitalize()))
+part1 = "hello my name is"
+part2 = "jack"
+print((part1.capitalize()) + " " + (part2.capitalize()))
 
 
 # Write a code to return formatted string "Hello, my name is Jack"
