@@ -1,6 +1,26 @@
-string_sample = "Hello world world"
-string_sample2 = "first letteR is lowErcase"
-string_sample3 = "extra whitespace string "
+price = 500.12333
+result = 'Price is {:.2f}'
+print(result.format(float(price)))
+
+
+# print(round(1.5))
+# print(round(2.5))
+
+
+# name = 'John'
+# surname = 'Smith'
+# age = input("Введите ваш возраст: ")
+# result = '{} {} is {} years old'
+# result = '{1} {0} is {2} years old'
+# result = '{user_name} {user_surname} is {user_age} years old'
+# print(result.format(user_name=name, user_surname=surname, user_age=age))
+
+# .format ищет {} в строке и заменяет ее на переменную в зависимости от последовательности в скобках, последовательность можно выставлять в {}, последовательность начинается от нуля
+# \n = перенос строки
+# print('Hello\nWorld')
+# string_sample = "Hello world world"
+# string_sample2 = "first letteR is lowErcase"
+# string_sample3 = "extra whitespace string "
 
 # x = 'hello world'.split() #возвращает список, массив, разделяя после каждого после делителя(по стандарту пробел)
 # print(x)
