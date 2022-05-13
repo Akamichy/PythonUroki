@@ -1,3 +1,4 @@
+import time
 user_input = None
 while True:
     if not user_input:
@@ -48,7 +49,9 @@ while True:
         '''dd.mm.yyyy'''
         print(f'You were born in {user_input[5:7]}.{user_input[3:5]}.{bcent}{user_input[1:3]}')
     elif user_choice == '3':
-        if int(user_input[7:10]) in range(161, 221):
+        if int(user_input[7:10]) in range(100, 151):
+            print('You were born in East Tallinn Central Hospital or Pelgulinna Maternity Hospital (Tallinn)')
+        elif int(user_input[7:10]) in range(161, 221):
             print('You were born in Rapla-, Loksa- or Hiiumaa Hospital')
         elif int(user_input[7:10]) in range(221, 271):
             print('You were born in Ida-Viru Central Hospital (Kohtla Järve)')
@@ -70,8 +73,17 @@ while True:
             print('You were born in Viljandi Hospital')
         elif int(user_input[7:10]) in range(651, 701):
             print('You were born in South Estonian Hospital (Võru) or Põlva Hospital')
-        else:
+        elif int(user_input[7:10]) in range(701, 999):
             print('You were not born in Estonia')
+        elif int(user_input[8:10]) in range(11, 20):
+            print("You were born in University of Tartu Women's Clinic")
+        elif int(user_input[8:10]) in range(21, 100):
+            print('You were born in East Tallinn Central Hospital or Pelgulinna Maternity Hospital (Tallinn)')
+        elif int(user_input[9:10]) in range(1, 10) or int(user_input[8:10]) == 10:
+            print('You were born in Kuressaare Hospital')
+        else:
+            print('The region of your birth has not been identified')
+
 
 
     elif user_choice == '4':
@@ -85,12 +97,10 @@ while True:
         else:
             print('Code is not valid')
 
-
-
-
-    elif user_choice == '5':
-        pass
-    elif user_choice == '0':
+    if user_choice == '0':
         break
+    elif user_choice == '5':
+        user_input = ''
+        continue
     else:
         print('Choice is out of range!')
