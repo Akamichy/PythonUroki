@@ -22,7 +22,7 @@ while True:
                         '1.Get gender\n'
                         '2.Get date of birth\n'
                         '3.Get region of birth\n'
-                        '4. Validate ID\n'
+                        '4.Validate ID\n'
                         '5.Change ID\n'
                         '0.Exit\n'
                         '--->')
@@ -102,5 +102,3 @@ while True:
     elif user_choice == '5':
         user_input = ''
         continue
-    else:
-        print('Choice is out of range!')
