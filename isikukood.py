@@ -23,7 +23,7 @@ while True:
                         '3.Get region of birth\n'
                         '4.Validate ID\n'
                         '5.Change ID\n'
-                        # '6.General information\n'
+                        '6.General information\n'
                         '0.Exit\n'
                         '--->')
     if user_choice == '1':
