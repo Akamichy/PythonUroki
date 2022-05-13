@@ -1,4 +1,3 @@
-import time
 user_input = None
 while True:
     if not user_input:
@@ -24,14 +23,19 @@ while True:
                         '3.Get region of birth\n'
                         '4.Validate ID\n'
                         '5.Change ID\n'
+                        # '6.General information\n'
                         '0.Exit\n'
                         '--->')
     if user_choice == '1':
         if int(user_input[0]) in range (1,9):
             if int(user_input[0]) % 2 == 0:
-                print('You are female')
+                gender = 'female'
+                print('You are', gender)
+
             else:
-                print('You are male')
+                gender = 'male'
+                print('You are', gender)
+
         else:
             print("Can't determine gender")
 
@@ -52,42 +56,60 @@ while True:
         print(birth)
 
     elif user_choice == '3':
-        if int(user_input[7:10]) in range(100, 151):
-            print('You were born in East Tallinn Central Hospital or Pelgulinna Maternity Hospital (Tallinn)')
-        elif int(user_input[7:10]) in range(151, 161):
-            print('You were born in Keila Hospital')
-        elif int(user_input[7:10]) in range(161, 221):
-            print('You were born in Rapla-, Loksa- or Hiiumaa Hospital')
-        elif int(user_input[7:10]) in range(221, 271):
-            print('You were born in Ida-Viru Central Hospital (Kohtla Järve)')
-        elif int(user_input[7:10]) in range(271, 371):
-            print('You were born in Maarjamõisa Clinic (Tartu) or Jõgeva Hospital')
-        elif int(user_input[7:10]) in range(371, 421):
-            print('You were born in Narva Hospital')
-        elif int(user_input[7:10]) in range(421, 471):
-            print('You were born in Pärnu Hospital')
-        elif int(user_input[7:10]) in range(471, 491):
-            print('You were born in Haapsalu Hospital')
-        elif int(user_input[7:10]) in range(491, 521):
-            print('You were born in Järva County Hospital')
-        elif int(user_input[7:10]) in range(521, 571):
-            print('You were born in Rakvere Hospital or Tapa Hospital')
-        elif int(user_input[7:10]) in range(571, 601):
-            print('You were born in Valga Hospital')
-        elif int(user_input[7:10]) in range(601, 651):
-            print('You were born in Viljandi Hospital')
-        elif int(user_input[7:10]) in range(651, 701):
-            print('You were born in South Estonian Hospital (Võru) or Põlva Hospital')
-        elif int(user_input[7:10]) in range(701, 1000):
-            print('You were not born in Estonia')
-        elif int(user_input[8:10]) in range(11, 20):
-            print("You were born in University of Tartu Women's Clinic")
-        elif int(user_input[8:10]) in range(21, 100):
-            print('You were born in East Tallinn Central Hospital or Pelgulinna Maternity Hospital (Tallinn)')
-        elif int(user_input[9:10]) in range(1, 10) or int(user_input[8:10]) == 10:
-            print('You were born in Kuressaare Hospital')
-        else:
-            print('The region of your birth has not been identified')
+            if int(user_input[7:10]) in range(100, 151):
+                region = 'You were born in East Tallinn Central Hospital or Pelgulinna Maternity Hospital (Tallinn)'
+                print(region)
+            elif int(user_input[7:10]) in range(151, 161):
+                region = 'You were born in Keila Hospital'
+                print(region)
+            elif int(user_input[7:10]) in range(161, 221):
+                region = 'You were born in Rapla-, Loksa- or Hiiumaa Hospital'
+                print(region)
+            elif int(user_input[7:10]) in range(221, 271):
+                region = 'You were born in Ida-Viru Central Hospital (Kohtla Järve)'
+                print(region)
+            elif int(user_input[7:10]) in range(271, 371):
+                region = 'You were born in Maarjamõisa Clinic (Tartu) or Jõgeva Hospital'
+                print(region)
+            elif int(user_input[7:10]) in range(371, 421):
+                region = 'You were born in Narva Hospital'
+                print(region)
+            elif int(user_input[7:10]) in range(421, 471):
+                region = 'You were born in Pärnu Hospital'
+                print(region)
+            elif int(user_input[7:10]) in range(471, 491):
+                region = 'You were born in Haapsalu Hospital'
+                print(region)
+            elif int(user_input[7:10]) in range(491, 521):
+                region = 'You were born in Järva County Hospital'
+                print(region)
+            elif int(user_input[7:10]) in range(521, 571):
+                region = 'You were born in Rakvere Hospital or Tapa Hospital'
+                print(region)
+            elif int(user_input[7:10]) in range(571, 601):
+                region = 'You were born in Valga Hospital'
+                print(region)
+            elif int(user_input[7:10]) in range(601, 651):
+                region = 'You were born in Viljandi Hospital'
+                print(region)
+            elif int(user_input[7:10]) in range(651, 701):
+                region = 'You were born in South Estonian Hospital (Võru) or Põlva Hospital'
+                print(region)
+            elif int(user_input[7:10]) in range(701, 1000):
+                region = 'You were not born in Estonia'
+                print(region)
+            elif int(user_input[8:10]) in range(11, 20):
+                region = "You were born in University of Tartu Women's Clinic"
+                print(region)
+            elif int(user_input[8:10]) in range(21, 100):
+                region = 'You were born in East Tallinn Central Hospital or Pelgulinna Maternity Hospital (Tallinn)'
+                print(region)
+            elif int(user_input[9:10]) in range(1, 10) or int(user_input[8:10]) == 10:
+                region = 'You were born in Kuressaare Hospital'
+                print(region)
+            else:
+                region = 'The region of your birth has not been identified'
+                print(region)
 
 
 
@@ -106,6 +128,15 @@ while True:
 
     if user_choice == '0':
         break
+    elif user_choice == '6':
+        try:
+            print('Hello, you are', gender + '.', birth + '.', 'And', region[0:21].lower() + region[21::].capitalize())
+        except (NameError):
+            print('Please, at first check your gender, date and region at first')
+
+
     elif user_choice == '5':
         user_input = ''
         continue
+
+
