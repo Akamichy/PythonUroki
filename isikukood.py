@@ -17,6 +17,66 @@ while True:
             else:
                 print(user_input)
                 break
+        # if int(user_input[0]) in range (1,9):
+        #     if int(user_input[0]) % 2 == 0:
+        #         gender = 'female'
+        #     else:
+        #         gender = 'male'
+        # else:
+        #     gender = 'Error. Can not determine gender'
+        #
+        # if user_input[0] in ['1', '2']:
+        #     bcent = '18'
+        # elif user_input[0] in ['3', '4']:
+        #     bcent = '19'
+        # elif user_input[0] in ['5', '6']:
+        #     bcent = '20'
+        # elif user_input[0] in ['7', '8']:
+        #     bcent = '21'
+        # else:
+        #     bcent = None
+        # birth = (f'You were born in {user_input[5:7]}.{user_input[3:5]}.{bcent}{user_input[1:3]}')
+        # if int(user_input[7:10]) in range(100, 151):
+        #     region = 'You were born in East Tallinn Central Hospital or Pelgulinna Maternity Hospital (Tallinn)'
+        # elif int(user_input[7:10]) in range(151, 161):
+        #     region = 'You were born in Keila Hospital'
+        # elif int(user_input[7:10]) in range(161, 221):
+        #     region = 'You were born in Rapla-, Loksa- or Hiiumaa Hospital'
+        # elif int(user_input[7:10]) in range(221, 271):
+        #     region = 'You were born in Ida-Viru Central Hospital (Kohtla Järve)'
+        # elif int(user_input[7:10]) in range(271, 371):
+        #     region = 'You were born in Maarjamõisa Clinic (Tartu) or Jõgeva Hospital'
+        # elif int(user_input[7:10]) in range(371, 421):
+        #     region = 'You were born in Narva Hospital'
+        # elif int(user_input[7:10]) in range(421, 471):
+        #     region = 'You were born in Pärnu Hospital'
+        # elif int(user_input[7:10]) in range(471, 491):
+        #     region = 'You were born in Haapsalu Hospital'
+        # elif int(user_input[7:10]) in range(491, 521):
+        #     region = 'You were born in Järva County Hospital'
+        # elif int(user_input[7:10]) in range(521, 571):
+        #     region = 'You were born in Rakvere Hospital or Tapa Hospital'
+        # elif int(user_input[7:10]) in range(571, 601):
+        #     region = 'You were born in Valga Hospital'
+        # elif int(user_input[7:10]) in range(601, 651):
+        #     region = 'You were born in Viljandi Hospital'
+        # elif int(user_input[7:10]) in range(651, 701):
+        #     region = 'You were born in South Estonian Hospital (Võru) or Põlva Hospital'
+        # elif int(user_input[7:10]) in range(701, 1000):
+        #     region = 'You were not born in Estonia'
+        # elif int(user_input[8:10]) in range(11, 20):
+        #     region = "You were born in University of Tartu Women's Clinic"
+        # elif int(user_input[8:10]) in range(21, 100):
+        #     region = 'You were born in East Tallinn Central Hospital or Pelgulinna Maternity Hospital (Tallinn)'
+        # elif int(user_input[9:10]) in range(1, 10) or int(user_input[8:10]) == 10:
+        #     region = 'You were born in Kuressaare Hospital'
+        # else:
+        #     region = 'The region of your birth has not been identified'
+
+
+
+
+
     user_choice = input('Please choose:\n'
                         '1.Get gender\n'
                         '2.Get date of birth\n'
@@ -38,6 +98,7 @@ while True:
 
         else:
             print("Can't determine gender")
+
 
     elif user_choice == '2':
         if user_input[0] in ['1', '2']:
@@ -130,9 +191,9 @@ while True:
         break
     elif user_choice == '6':
         try:
-            print('Hello, you are', gender + '.', birth + '.', 'And', region[0:21].lower() + region[21::].capitalize())
+            print('You are', gender + '.', birth + '.', 'And', region[0:21].lower() + region[21::].capitalize())
         except (NameError):
-            print('Please, at first check your gender, date and region at first')
+            print('Check your gender, date and region at first, please')
 
 
     elif user_choice == '5':
