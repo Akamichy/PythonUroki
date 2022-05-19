@@ -5,11 +5,11 @@ import datetime
 input - параметр который функция получает
 output - параметр который функция возвращает
 """
-dt_str3 = '7 Июнь 2021, 12:56'
-dt_str3 = dt_str3.replace('Июнь', 'June')
-str_to_date3 = datetime.datetime.strptime(dt_str3, '%d %B %Y, %H:%M')
-print(str_to_date3)
-print(type(str_to_date3))
+# dt_str3 = '7 Июнь 2021, 12:56'
+# dt_str3 = dt_str3.replace('Июнь', 'June')
+# str_to_date3 = datetime.datetime.strptime(dt_str3, '%d %B %Y, %H:%M')
+# print(str_to_date3)
+# print(type(str_to_date3))
 
 # Write a program that converts given string to datetime object
 sample1 = 'Jan 01 2014, 2:43PM'
