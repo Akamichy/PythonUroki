@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup as BS
-import time
+
 hdr = {'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.0.0 Mobile Safari/537.36'}
 url = 'https://www.ilmateenistus.ee/ilm/ilmavaatlused/vaatlusandmed/oopaevaandmed/'
 r = requests.get(url, headers=hdr, timeout=10)
@@ -59,7 +59,7 @@ city()
 
 
 
-
+# 1st try, it did'nt work
 # user_choice = None
 # while True:
 #     if not user_choice:
